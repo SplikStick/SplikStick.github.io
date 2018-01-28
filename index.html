@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-<script>
-	function myFunction(id) {
-    	var x = document.getElementById(id);
-    	if (x.className.indexOf("w3-show") == -1) {
-        	x.className += " w3-show";
-    	} else { 
-        	x.className = x.className.replace(" w3-show", "");
-    	}
-	}
-</script>
-
-
 <html>
 <title>Matthew Goulart</title>
 <meta charset="UTF-8">
@@ -24,6 +12,18 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
 
 <body class="w3-light-grey">
+
+<!-- Open More Function -->
+<script>
+	function myFunction(id) {
+    	var x = document.getElementById(id);
+    	if (x.className.indexOf("w3-show") == -1) {
+        	x.className += " w3-show";
+    	} else { 
+        	x.className = x.className.replace(" w3-show", "");
+    	}
+	}
+</script>
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
