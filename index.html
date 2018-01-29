@@ -23,6 +23,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         	x.className = x.className.replace(" w3-show", "");
     	}
 	}
+
+	function guessingGame(guess) {
+		var favNumber = 37;
+		if (guess < favNumber) {
+			echo "Your guess is too low! Try again!"
+		} else if (guess > favNumber) {
+			echo "Your guess is too high! Try again!"
+		} else {
+			
+		}
+	}
 </script>
 
 <!-- Page Container -->
@@ -131,6 +142,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     	<h3>Caution!</h3>
     	<p>This page is still under construction!</p>
   	  </div>
+
+	  <!-- Guess My Favourite Number! -->
+	  <div class"w3-container w3-card w3-white w3-margin-bottom">		
+		<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-hashtag fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>What's my favourite number?</h2>
+		<div class="w3-container">
+		 	<form class="w3-panel w3-card-4" action="/action_page.php">
+  				<p><input class="w3-input" type="text" placeholder="Your guess?" id="userGuess"> <button onClick="guessingGame(userGuess)" class="w3-btn w3-round w3-cyan w3-left-align">Check</button></p>
+			</form>	  
+			<hr>
+        </div>
+	  </div>
 
 	  <!-- Education -->
       <div class="w3-container w3-card w3-white w3-margin-bottom">
