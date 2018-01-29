@@ -27,7 +27,7 @@
 	function guessingGame() {
 		var favNumber = 37;
 		var form = document.getElementById('userInput');
-		var userGuess = form.number.value;
+		var userGuess = form.value;
 
 		if (useGuess < favNumber) {
 			form.value = "Your guess is too low! Try again!";
@@ -157,7 +157,7 @@
 			<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-hashtag fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>What's my favourite number?</h2>
 			<div class="w3-container" id="guessForm">
 		 		<form class="w3-panel">
-  					<p><input class="w3-input" type="text" placeholder="Your guess?" value="" id="userInput"><i class="fa fa-star fa-fw w3-margin-right w3-hide w3-yellow" id="star"></i></p>
+  					<p><input class="w3-input" type="text" placeholder="Your guess?" value="0" id="userInput"><i class="fa fa-star fa-fw w3-margin-right w3-hide w3-yellow" id="star"></i></p>
 				</form>	  
 				<p><button onClick="guessingGame()" class="w3-btn w3-round w3-cyan w3-left-align">Check</button></p>
 				<hr>
