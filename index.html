@@ -36,7 +36,9 @@
 		} else {
 			if (document.getElementById('star').className.indexOf("w3-show") == -1) {	
 				form.value = "Have a GOLD STAR! My favourite number is 37!";
-				showMore("star");
+				//showMore("star");
+				document.getElementById('gameSymbol').className.replace(" fa-hashtag", " fa-star");
+				document.getElementById('gameSymbol').className.replace(" w3-text-cyan", " w3-text-yellow");
     		} else {
 				form.value = "Yay! You got it! My favourite number is 37!";
 			}
@@ -154,7 +156,7 @@
 
 	  	<!-- Guess My Favourite Number! -->
 	  	<div class="w3-container w3-card w3-white w3-margin-bottom">		
-			<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-hashtag fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>What's my favourite number?</h2>
+			<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-hashtag fa-fw w3-margin-right w3-xxlarge w3-text-cyan" id="gameSymbol"></i>What's my favourite number?</h2>
 			<div class="w3-container" id="guessForm">
 		 		<form class="w3-panel">
   					<p><input class="w3-input" type="text" placeholder="Your guess?" value="0" id="userInput"><i class="fa fa-star fa-fw w3-margin-right w3-hide w3-yellow" id="star"></i></p>
