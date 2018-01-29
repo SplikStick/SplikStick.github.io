@@ -34,9 +34,9 @@
 		} else if (userGuess > favNumber) {
 			form.value = "Your guess is too high! Try again!";
 		} else {
-			if (document.getElementById('star').indexOf("w3-show") == -1) {	
+			if (document.getElementById('star').className.indexOf("w3-show") == -1) {	
 				form.value = "Have a GOLD STAR! My favourite number is 37!";
-				//showMore("star");
+				showMore("star");
     		} else {
 				form.value = "Yay! You got it! My favourite number is 37!";
 			}
