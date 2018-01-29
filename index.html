@@ -24,14 +24,20 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     	}
 	}
 
-	function guessingGame(guess) {
+	function guessingGame() {
 		var favNumber = 37;
-		if (guess < favNumber) {
-			echo "Your guess is too low! Try again!"
-		} else if (guess > favNumber) {
-			echo "Your guess is too high! Try again!"
+		var userGuess = document.guessForm.inputField.number.value;
+		if (useGuess < favNumber) {
+			document.guessForm.inputField.value = "Your guess is too low! Try again!";
+		} else if (userGuess > favNumber) {
+			document.guessForm.inputField.value = "Your guess is too high! Try again!";
 		} else {
-			
+			if (document.guessForm.star.className.indexOf("w3-show") == -1) {	
+				document.guessForm.inputField.value = "Have a GOLD STAR! My favourite number is 37!";
+				document.guessForm.star.className += " w3-show";
+    		} else {
+				document.guessForm.inputField.value = "Yay! You got it! My favourite number is 37!";
+			{
 		}
 	}
 </script>
@@ -146,9 +152,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	  <!-- Guess My Favourite Number! -->
 	  <div class"w3-container w3-card w3-white w3-margin-bottom">		
 		<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-hashtag fa-fw w3-margin-right w3-xxlarge w3-text-cyan"></i>What's my favourite number?</h2>
-		<div class="w3-container">
-		 	<form class="w3-panel w3-card-4">
-  				<p><input class="w3-input" type="text" placeholder="Your guess?" id="userGuess"> <button onClick="guessingGame(userGuess)" class="w3-btn w3-round w3-cyan w3-left-align">Check</button></p>
+		<div class="w3-container" name="guessForm">
+		 	<form class="w3-panel">
+  				<p><input class="w3-input" type="text" placeholder="Your guess?" name="userInput"><i class="fa fa-star fa-fw w3-margin-right" name="star"></i></p>
+				<p><button onClick="guessingGame()" class="w3-btn w3-round w3-cyan w3-left-align">Check</button></p>
 			</form>	  
 			<hr>
         </div>
