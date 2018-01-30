@@ -12,41 +12,41 @@
 		html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	</style>
 
-<!-- Show More Function/Guessing Game -->
-<script>
-	function showMore(id) {
-    	var x = document.getElementById(id);
-    	if (x.className.indexOf("w3-show") == -1) {
-        	x.className += " w3-show";
-    	} else { 
-        	x.className = x.className.replace(" w3-show", "");
-    	}
-	}
+	<!-- Show More Function/Guessing Game -->
+	<script>
+		function showMore(id) {
+		var x = document.getElementById(id);
+		if (x.className.indexOf("w3-show") == -1) {
+			x.className += " w3-show";
+		} else { 
+			x.className = x.className.replace(" w3-show", "");
+		}
+		}
 
-	function guessingGame() {
-		var favNumber = 37;
-		var form = document.getElementById('userInput');
-		var userGuess = form.value;
-		var hashtag = document.getElementById('gameSymbol');
+		function guessingGame() {
+			var favNumber = 37;
+			var form = document.getElementById('userInput');
+			var userGuess = form.value;
+			var hashtag = document.getElementById('gameSymbol');
 
-		if (isNaN(userGuess)) {
-			form.value = "That is not a number! Try again!"
-		} else if (userGuess < favNumber) {
-			form.value = "Your guess is too low! Try again!";
-		} else if (userGuess > favNumber) {
-			form.value = "Your guess is too high! Try again!";
-		} else {
-			if (hashtag.className.indexOf("fa-star") == -1) {	
-				form.value = "Have a GOLD STAR! My favourite number is 37!";
-				hashtag.className = hashtag.className.replace(" fa-hashtag", " fa-star");
-				hashtag.className = hashtag.className.replace(" w3-text-cyan", " w3-text-yellow");
-				hashtag.className += " fa-spin";
-    		} else {
-				form.value = "Yay! You got it! My favourite number is 37!";
+			if (isNaN(userGuess)) {
+				form.value = "That is not a number! Try again!"
+			} else if (userGuess < favNumber) {
+				form.value = "Your guess is too low! Try again!";
+			} else if (userGuess > favNumber) {
+				form.value = "Your guess is too high! Try again!";
+			} else {
+				if (hashtag.className.indexOf("fa-star") == -1) {	
+					form.value = "Have a GOLD STAR! My favourite number is 37!";
+					hashtag.className = hashtag.className.replace(" fa-hashtag", " fa-star");
+					hashtag.className = hashtag.className.replace(" w3-text-cyan", " w3-text-yellow");
+					hashtag.className += " fa-spin";
+			} else {
+					form.value = "Yay! You got it! My favourite number is 37!";
+				}
 			}
 		}
-	}
-</script>
+	</script>
 </head>
 
 <body class="w3-light-grey">
@@ -235,7 +235,7 @@
 
 <footer class="w3-container w3-cyan w3-center w3-margin-top">
 	<p>Find me on social media!</p>
-	<a class="fa fa-facebook-official w3-hover-opacity" href="www.baconsizling.com" style="text-decoration:none"></a>
+	<a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/matthew.goulart.77" style="text-decoration:none"></a>
 	<i class="fa fa-instagram w3-hover-opacity"></i>
 	<i class="fa fa-snapchat w3-hover-opacity"></i>
 	<i class="fa fa-twitter w3-hover-opacity"></i>
