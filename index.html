@@ -28,6 +28,7 @@
 		var favNumber = 37;
 		var form = document.getElementById('userInput');
 		var userGuess = form.value;
+		var hashtag = document.getElementById('gameSymbol');
 
 		if (isNaN(userGuess)) {
 			form.value = "That is not a number! Try again!"
@@ -39,8 +40,8 @@
 			if (document.getElementById('star').className.indexOf("w3-show") == -1) {	
 				form.value = "Have a GOLD STAR! My favourite number is 37!";
 				//showMore("star");
-				document.getElementById('gameSymbol').className.replace(" fa-hashtag", " fa-star");
-				document.getElementById('gameSymbol').className.replace(" w3-text-cyan", " w3-text-yellow");
+				hashtag.className = hashtag.className.replace(" fa-hashtag", " fa-star");
+				hashtag.className = hashtag.className.replace(" w3-text-cyan", " w3-text-yellow");
     		} else {
 				form.value = "Yay! You got it! My favourite number is 37!";
 			}
