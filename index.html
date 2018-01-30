@@ -29,7 +29,7 @@
 		var form = document.getElementById('userInput');
 		var userGuess = form.value;
 
-		if (!(typeof userGuess == 'number')) {
+		if (isNaN(userGuess)) {
 			form.value = "That is not a number! Try again!"
 		} else if (userGuess < favNumber) {
 			form.value = "Your guess is too low! Try again!";
