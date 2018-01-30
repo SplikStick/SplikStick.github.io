@@ -37,9 +37,8 @@
 		} else if (userGuess > favNumber) {
 			form.value = "Your guess is too high! Try again!";
 		} else {
-			if (document.getElementById('star').className.indexOf("w3-show") == -1) {	
+			if (hashtag.className.indexOf("fa-star") == -1) {	
 				form.value = "Have a GOLD STAR! My favourite number is 37!";
-				//showMore("star");
 				hashtag.className = hashtag.className.replace(" fa-hashtag", " fa-star");
 				hashtag.className = hashtag.className.replace(" w3-text-cyan", " w3-text-yellow");
     		} else {
@@ -162,7 +161,7 @@
 			<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-hashtag fa-fw w3-margin-right w3-xxlarge w3-text-cyan" id="gameSymbol"></i>What's my favourite number?</h2>
 			<div class="w3-container" id="guessForm">
 		 		<form class="w3-panel">
-  					<p><input class="w3-input" type="text" placeholder="Your guess?" value="0" id="userInput"><i class="fa fa-star fa-fw w3-margin-right w3-hide w3-yellow" id="star"></i></p>
+  					<p><input class="w3-input" type="text" placeholder="Your guess?" value="0" id="userInput"></p>
 				</form>	  
 				<p><button onClick="guessingGame()" class="w3-btn w3-round w3-cyan w3-left-align">Check</button></p>
 				<hr>
