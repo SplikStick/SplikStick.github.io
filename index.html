@@ -29,7 +29,9 @@
 		var form = document.getElementById('userInput');
 		var userGuess = form.value;
 
-		if (userGuess < favNumber) {
+		if (!(typeof userGuess == 'number')) {
+			form.value = "That is not a number! Try again!"
+		} if (userGuess < favNumber) {
 			form.value = "Your guess is too low! Try again!";
 		} else if (userGuess > favNumber) {
 			form.value = "Your guess is too high! Try again!";
