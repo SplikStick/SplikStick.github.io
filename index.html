@@ -30,9 +30,12 @@
 			var hashtag = document.getElementById('gameSymbol');
 
 			if (isNaN(userGuess)) {
-				form.value = "That is not a number! Try again!"
+				form.value= "";
+				form.placeholder = "That is not a number! Try again!";
 			} else if (userGuess < favNumber) {
 				form.value = "Your guess is too low! Try again!";
+			} else if (userGuess == 42) {
+				form.value = "The Ultimate Answer to Life, the Universe, and Everything?";
 			} else if (userGuess > favNumber) {
 				form.value = "Your guess is too high! Try again!";
 			} else {
@@ -49,7 +52,7 @@
 	</script>
 </head>
 
-<body class="w3-light-grey" background="images/dickbutt.jpg">
+<body class="w3-light-grey">
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
