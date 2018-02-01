@@ -15,12 +15,12 @@
 	<!-- Show More Function/Guessing Game -->
 	<script>
 		function showMore(id) {
-		var x = document.getElementById(id);
-		if (x.className.indexOf("w3-show") == -1) {
-			x.className += " w3-show";
-		} else { 
-			x.className = x.className.replace(" w3-show", "");
-		}
+			var x = document.getElementById(id);
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else { 
+				x.className = x.className.replace(" w3-show", "");
+			}
 		}
 
 		function guessingGame() {
@@ -29,23 +29,23 @@
 			var userGuess = form.value;
 			var hashtag = document.getElementById('gameSymbol');
 
+			form.value = "";
 			if (isNaN(userGuess)) {
-				form.value= "";
 				form.placeholder = "That is not a number! Try again!";
 			} else if (userGuess < favNumber) {
-				form.value = "Your guess is too low! Try again!";
+				form.placeholder = "Your guess is too low! Try again!";
 			} else if (userGuess == 42) {
-				form.value = "The Ultimate Answer to Life, the Universe, and Everything?";
+				form.placeholder = "The Ultimate Answer to Life, the Universe, and Everything?";
 			} else if (userGuess > favNumber) {
-				form.value = "Your guess is too high! Try again!";
+				form.placeholder = "Your guess is too high! Try again!";
 			} else {
-				if (hashtag.className.indexOf("fa-star") == -1) {	
-					form.value = "Have a GOLD STAR! My favourite number is 37!";
+				if (hashtag.className.indexOf("fa-star") == -1) {
+					form.placeholder = "Have a GOLD STAR! My favourite number is 37!";
 					hashtag.className = hashtag.className.replace(" fa-hashtag", " fa-star");
 					hashtag.className = hashtag.className.replace(" w3-text-cyan", " w3-text-yellow");
 					hashtag.className += " fa-spin";
 			} else {
-					form.value = "Yay! You got it! My favourite number is 37!";
+					form.placeholder = "Yay! You got it! My favourite number is 37!";
 				}
 			}
 		}
