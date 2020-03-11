@@ -1,4 +1,4 @@
-## Welcome to My Website... or the what's behind it. :P
+## Welcome to My Website... or what's behind it. :P
 
 Here is the link to my website:
 https://splikstick.github.io/
